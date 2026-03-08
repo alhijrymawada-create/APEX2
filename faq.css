@@ -1,0 +1,96 @@
+body{
+
+    margin:0;
+    font-family:Arial;
+    background: linear-gradient(135deg, #d49cc7 0%, #a279b3 40%, #201a30 100%);
+    color:white;
+    
+    }
+    
+    .faq{
+    
+    padding:80px 10%;
+    text-align:center;
+    
+    }
+    
+    .faq h1{
+    
+    font-size:40px;
+    margin-bottom:50px;
+    
+    }
+    
+    .faq-container{
+    
+    max-width:900px;
+    margin:auto;
+    
+    }
+    
+    .faq-card{
+    
+    background:#0b132b;
+    border-radius:15px;
+    margin-bottom:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    transition:0.3s;
+    
+    }
+    
+    .faq-card:hover{
+    
+    transform:translateY(-5px) scale(1.02);
+    
+    }
+    
+    .faq-header{
+    
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    cursor:pointer;
+    
+    }
+    
+    .faq-header h3{
+    
+    flex:1;
+    margin:0 15px;
+    text-align:right;
+    
+    }
+    
+    .faq-header i{
+    
+    color:#c84bff;
+    font-size:20px;
+    
+    }
+    
+    .faq-header span{
+    
+    font-size:22px;
+    color:#c84bff;
+    
+    }
+    
+    .faq-body{
+    
+    max-height:0;
+    overflow:hidden;
+    padding:0 20px;
+    color:#ddd;
+    line-height:1.6;
+    transition:0.4s ease;
+    
+    }
+    
+    .faq-card.active .faq-body{
+    
+    max-height:200px;
+    padding:20px;
+    
+    }
