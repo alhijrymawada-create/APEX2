@@ -1,96 +1,96 @@
-body{
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+}
 
-    margin:0;
-    font-family:Arial;
-    background: linear-gradient(135deg, #d49cc7 0%, #a279b3 40%, #201a30 100%);
-    color:white;
-    
-    }
-    
-    .faq{
-    
-    padding:80px 10%;
-    text-align:center;
-    
-    }
-    
-    .faq h1{
-    
-    font-size:40px;
-    margin-bottom:50px;
-    
-    }
-    
-    .faq-container{
-    
-    max-width:900px;
-    margin:auto;
-    
-    }
-    
-    .faq-card{
-    
-    background:#0b132b;
-    border-radius:15px;
-    margin-bottom:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    transition:0.3s;
-    
-    }
-    
-    .faq-card:hover{
-    
-    transform:translateY(-5px) scale(1.02);
-    
-    }
-    
-    .faq-header{
-    
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:20px;
-    cursor:pointer;
-    
-    }
-    
-    .faq-header h3{
-    
-    flex:1;
-    margin:0 15px;
-    text-align:right;
-    
-    }
-    
-    .faq-header i{
-    
-    color:#c84bff;
-    font-size:20px;
-    
-    }
-    
-    .faq-header span{
-    
-    font-size:22px;
-    color:#c84bff;
-    
-    }
-    
-    .faq-body{
-    
-    max-height:0;
-    overflow:hidden;
-    padding:0 20px;
-    color:#ddd;
-    line-height:1.6;
-    transition:0.4s ease;
-    
-    }
-    
-    .faq-card.active .faq-body{
-    
-    max-height:200px;
-    padding:20px;
-    
-    }
+/* ======= شريط العنوان بشكل بطاقة عائمة ======= */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 30px auto 50px;
+    max-width: 900px;
+    border-radius: 15px;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ======= قسم الأسئلة ======= */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+/* ======= بطاقات الأسئلة ======= */
+.faq-card {
+    background:linear-gradient(180deg,#3b0066,#3f0c61);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+/* ======= تأثير عند المرور ======= */
+.faq-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: linear-gradient(135deg, #4b0b7a, #1f0533);
+}
+
+/* ======= رأس السؤال ======= */
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+.faq-header h3 {
+    flex: 1;
+    margin: 0 15px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.faq-header i {
+    font-size: 22px;
+    color: #ff94ff;
+    transition: transform 0.3s;
+}
+
+.faq-header span {
+    font-size: 24px;
+    color: #ff94ff;
+    transition: transform 0.3s;
+}
+
+/* ======= جسم الإجابة ======= */
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #ddd;
+    line-height: 1.7;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+/* ======= عند فتح السؤال ======= */
+.faq-card.active .faq-body {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.faq-card.active .faq-header i {
+    transform: rotate(45deg);
+}
+
+.faq-card.active .faq-header span {
+    transform: rotate(180deg);
+}

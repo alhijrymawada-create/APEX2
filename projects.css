@@ -1,0 +1,89 @@
+/* خلفية عامة */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+}
+
+/* شريط العنوان */
+header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* شبكة المشاريع */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+/* بطاقة المشروع */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* تأثير Hover على البطاقة */
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* صورة المشروع */
+.project-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* معلومات المشروع */
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-info h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
