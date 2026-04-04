@@ -1,4 +1,4 @@
-/* الإعدادات العامة */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,12 +16,12 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
-/* ===== 1. تنسيق الهيدر (Navigation) المصلح ===== */
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0; /* زيادة بسيطة لإعطاء متنفس */
+    padding: 15px 0; 
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -33,7 +33,6 @@ nav {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    /* التبديل بين اللوجو والروابط ليتناسب مع اتجاه الصفحة RTL */
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center;
@@ -48,11 +47,9 @@ nav {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    margin-right: 1000px; /* إبعاد الزر قليلاً عن الروابط */
+    margin-right: 1000px; 
 }
 
-
-/* شريط العنوان */
 header {
     text-align: center;
     font-size: 32px;
@@ -65,55 +62,61 @@ header {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* شبكة المشاريع */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto 50px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    max-width: 900px;      
+    margin: 60px auto;      
+    padding: 20px;          
+    position: relative;
+    z-index: 1;
 }
 
-/* بطاقة المشروع */
 .project-card {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
 }
 
-/* تأثير Hover على البطاقة */
 .project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    border-color: rgba(217, 70, 239, 0.5);
 }
 
-/* صورة المشروع */
 .project-card img {
     width: 100%;
+    height: 220px; 
+    object-fit: cover;
     display: block;
-    transition: transform 0.3s;
+    filter: brightness(0.85);
+    transition: 0.5s ease;
 }
 
 .project-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter: brightness(1);
 }
 
-/* معلومات المشروع */
 .project-info {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(to top, rgba(13, 0, 26, 0.9), transparent);
     color: #fff;
-    padding: 20px;
+    padding: 25px 20px 15px;
     box-sizing: border-box;
-    transition: transform 0.3s, opacity 0.3s;
-    transform: translateY(100%);
+    transition: all 0.4s ease;
+    transform: translateY(20px);
     opacity: 0;
 }
 
@@ -123,12 +126,45 @@ header {
 }
 
 .project-info h3 {
-    margin: 0 0 10px;
+    margin: 0 0 5px;
     font-size: 20px;
+    color: #d946ef;
 }
 
 .project-info p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at center, #0a0015 0%, #000 100%); 
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+    opacity: 0.6;
+    animation: twinkle var(--duration) infinite ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.2; 
+        transform: scale(0.7); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.1); 
+    }
 }

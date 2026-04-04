@@ -11,12 +11,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===== 1. تنسيق الهيدر (Navigation) المصلح ===== */
+/* ===== (Navigation) ===== */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0; /* زيادة بسيطة لإعطاء متنفس */
+    padding: 5px 0; 
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;

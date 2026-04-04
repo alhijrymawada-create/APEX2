@@ -1,5 +1,3 @@
-
-// Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 
 import {
@@ -9,11 +7,7 @@ import {
     GoogleAuthProvider,
     signInWithPopup
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyADrIA-IrZnp19Jx-CC6jzx7Zn6uwWH_W8",
     authDomain: "apex-website-654b7.firebaseapp.com",
@@ -27,7 +21,7 @@ const firebaseConfig = {
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); // تأكد أن هذا السطر موجود في الأعلى وليس داخل دالة
+const auth = getAuth(app); 
 
 // --- SIGN UP ---
 const signupBtn = document.getElementById('btn-signup');

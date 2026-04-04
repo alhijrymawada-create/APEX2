@@ -1,10 +1,8 @@
-/* الإعدادات العامة */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
-    
 }
 
 html {
@@ -16,12 +14,12 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
-/* ===== 1. تنسيق الهيدر (Navigation) المصلح ===== */
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0; /* زيادة بسيطة لإعطاء متنفس */
+    padding: 15px 0;
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -33,9 +31,8 @@ nav {
     width: 90%;
     max-width: 1300px;
     display: flex;
-    /* التبديل بين اللوجو والروابط ليتناسب مع اتجاه الصفحة RTL */
-    flex-direction: row; 
-    justify-content: space-between; 
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -48,11 +45,9 @@ nav {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-    margin-right: 1000px; /* إبعاد الزر قليلاً عن الروابط */
+    margin-right: 1000px;
 }
 
-
-/* ======= شريط العنوان بشكل بطاقة عائمة ======= */
 header {
     backdrop-filter: blur(10px);
     margin: 100px auto;
@@ -62,34 +57,30 @@ header {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ======= قسم الأسئلة ======= */
 .faq-container {
     max-width: 900px;
     margin: 0 auto 50px;
     padding: 0 20px;
 }
 
-/* ======= بطاقات الأسئلة ======= */
 .faq-card {
-    background:linear-gradient(180deg,#3b0066,#3f0c61);
+    background: linear-gradient(180deg, #3b0066, #3f0c61);
     border-radius: 15px;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, background 0.3s;
     cursor: pointer;
 }
 
-/* ======= تأثير عند المرور ======= */
 .faq-card:hover {
     transform: translateY(-5px) scale(1.02);
     background: linear-gradient(135deg, #4b0b7a, #1f0533);
 }
 
-/* ======= رأس السؤال ======= */
 .faq-header {
     display: flex;
     align-items: center;
@@ -117,7 +108,6 @@ header {
     transition: transform 0.3s;
 }
 
-/* ======= جسم الإجابة ======= */
 .faq-body {
     max-height: 0;
     overflow: hidden;
@@ -127,7 +117,6 @@ header {
     transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
-/* ======= عند فتح السؤال ======= */
 .faq-card.active .faq-body {
     max-height: 300px;
     padding: 20px;

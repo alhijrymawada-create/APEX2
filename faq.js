@@ -1,5 +1,3 @@
-
-// ======= فتح وإغلاق الأسئلة =======
 const cards = document.querySelectorAll(".faq-card");
 cards.forEach(card => {
     const header = card.querySelector(".faq-header");
