@@ -951,7 +951,40 @@ nav {
     transform: scale(1.1);
 
 }
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
 
+.footer-icons a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-icons img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.footer-icons a:hover {
+    background: #d946ef;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(217, 70, 239, 0.45);
+}
+
+.footer-icons a:hover img {
+    transform: scale(1.1);
+}
 .newsletter {
 
     display: flex;
