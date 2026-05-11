@@ -129,3 +129,53 @@ header {
 .faq-card.active .faq-header span {
     transform: rotate(180deg);
 }
+
+/* تنسيقات مخصصة للجوال فقط */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column; /* ترتيب الشعار والقائمة فوق بعض */
+        height: auto !important; /* السماح للهيدر بالتمدد حسب المحتوى */
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav {
+        display: block !important; /* التأكد من أن القائمة ليست مخفية */
+    }
+
+    nav ul {
+        flex-direction: column; /* جعل الروابط تحت بعضها */
+        padding: 0;
+    }
+}
+
+
+/* تنسيقات ذكية للجوال */
+@media (max-width: 768px) {
+    /* حاوية الأسئلة الأساسية */
+    .faq-container, .faq-section { 
+        width: 95% !important; /* تأخذ أغلب عرض الشاشة */
+        margin: 10px auto !important; /* توسيط الحاوية */
+        padding: 10px !important;
+    }
+
+    /* كل سؤال على حدة */
+    .faq-item {
+        width: 100% !important; /* السؤال يأخذ العرض المتاح كاملاً */
+        box-sizing: border-box; /* لضمان عدم خروج الإطار عن الشاشة */
+    }
+
+    /* نص السؤال */
+    .faq-question {
+        font-size: 16px !important; /* تصغير الخط قليلاً ليناسب الجوال */
+        padding: 15px !important;
+        line-height: 1.4;
+    }
+
+    /* نص الإجابة */
+    .faq-answer {
+        font-size: 14px !important;
+        padding: 10px 15px !important;
+    }
+}
